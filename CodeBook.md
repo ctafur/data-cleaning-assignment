@@ -1,6 +1,6 @@
 
-Tidy Data Set Code Book	{#welcome}
-====================
+# Tidy Data Set Code Book	
+
 
 
 This is the CodeBook explaining the data set and the R script submitted for peer assessment in the course *Getting and Cleaning Data*, part of the online Data Science Specialization by the Johns Hopkins University.
@@ -110,13 +110,14 @@ We will briefly summarize the steps taken by the script:
 
 1. Read the following files with the *read.table* command:
 
-> * *features.txt* (561 variables)
-> * *subject_train.txt* (vector with the id of the subjects for each observation of the training set)
-> * *subject_test.txt* (vector with the id of the subjects for each observation of the test set)
-> * *y_train.txt* (vector with the id of the 6 possible activities for each observation of the train set)
-> * *y_test.txt" (vector with the id of the 6 possible activities for each observation of the test set)
-> * *X_train.txt* (7352 x 561 matrix with all the observations from the training set)
-> * *X_test.txt* (2947 x 561 matrix with all the observations from the test set)
+    > * *features.txt* (561 variables)
+    > * *subject_train.txt* (vector with the id of the subjects for each observation of the training set)
+    > * *subject_test.txt* (vector with the id of the subjects for each observation of the test set)
+    > * *y_train.txt* (vector with the id of the 6 possible activities for each observation of the train set)
+    > * *y_test.txt" (vector with the id of the 6 possible activities for each observation of the test set)
+    > * *X_train.txt* (7352 x 561 matrix with all the observations from the training set)
+    > * *X_test.txt* (2947 x 561 matrix with all the observations from the test set)
+
 2. Merge the vectors and data frames from all those files in one big data set of 10,299 observations and 563 columns.
 3.  Add descriptive column headers to set, being the first two the subject ID and the type of activity.
 4. Subsets the data frame leaving only mean and standard deviation variables, reducing the columns down to 79 variables plus the subject id and activity type columns.
@@ -135,27 +136,29 @@ The 8 variables (columns) in the data set are:
 
 As an example, these are the first 6 rows of the final data set following the command `head(Cset)`
 
-   subjectID          variable     walking
-1         1 tBodyAcc-mean()-X  0.27733076
-2         1 tBodyAcc-mean()-Y -0.01738382
-3         1 tBodyAcc-mean()-Z -0.11114810
-4         1  tBodyAcc-std()-X -0.28374026
-5         1  tBodyAcc-std()-Y  0.11446134
-6         1  tBodyAcc-std()-Z -0.26002790
-  walkingUpstairs walkingDownstairs
-1     0.255461690       0.289188320
-2    -0.023953149      -0.009918505
-3    -0.097302002      -0.107566191
-4    -0.354708025       0.030035338
-5    -0.002320265      -0.031935943
-6    -0.019479239      -0.230434213
-       sitting            standing      laying
-1  0.261237565  0.27891763  0.22159824
-2 -0.001308288 -0.01613759 -0.04051395
-3 -0.104544182 -0.11060182 -0.11320355
-4 -0.977229008 -0.99575990 -0.92805647
-5 -0.922618642 -0.97319006 -0.83682741
-6 -0.939586291 -0.97977588 -0.82606140
+ 
+
+      subjectID          variable     walking
+    1         1 tBodyAcc-mean()-X  0.27733076
+    2         1 tBodyAcc-mean()-Y -0.01738382
+    3         1 tBodyAcc-mean()-Z -0.11114810
+    4         1  tBodyAcc-std()-X -0.28374026
+    5         1  tBodyAcc-std()-Y  0.11446134
+    6         1  tBodyAcc-std()-Z -0.26002790
+      walkingUpstairs walkingDownstairs
+    1     0.255461690       0.289188320
+    2    -0.023953149      -0.009918505
+    3    -0.097302002      -0.107566191
+    4    -0.354708025       0.030035338
+    5    -0.002320265      -0.031935943
+    6    -0.019479239      -0.230434213
+           sitting    standing      laying
+    1  0.261237565  0.27891763  0.22159824
+    2 -0.001308288 -0.01613759 -0.04051395
+    3 -0.104544182 -0.11060182 -0.11320355
+    4 -0.977229008 -0.99575990 -0.92805647
+    5 -0.922618642 -0.97319006 -0.83682741
+    6 -0.939586291 -0.97977588 -0.82606140
 
 Therefore, each row shows for each subject ID the average value of each variable in the different six types of activity.
 
